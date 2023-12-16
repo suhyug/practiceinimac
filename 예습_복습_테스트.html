@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사칙연산 셀렉트와 옵션 사용, 스위치문</title>
+</head>
+<body>
+<input type="number" id="num1">
+<select id="select">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+</select>
+<input type="number" id="num2">
+<button id="btn">결과확인</button>
+<div id="result"></div>
+    <script>
+        let btn = document.getElementById("btn")
+        btn.addEventListener("click", calc)
+        
+        function calc(){
+            let num1 = parseInt(document.getElementById("num1").value)
+            let num2 = parseInt(document.getElementById("num2").value)
+            let selectOption = document.getElementById("select");
+            let selectedOption = selectOption.options[selectOption.selectedIndex].value;
+            let result;
+            switch(selectedOption){
+                case "+":
+                    result = num1 + num2
+                    //맞습니다. JavaScript에서 변수를 선언하지 않고 사용하면 해당 변수는 전역 스코프로 간주됩니다. 따라서 함수 내에서 result를 선언하지 않은 채로 사용하면 JavaScript는 해당 변수를 전역 변수로 취급합니다. 함수 내에서 변수를 찾지만 찾지 못하면 상위 스코프에서 찾기 시작하며, 최종적으로 전역 스코프에서 찾게 됩니다.
+                    break;
+                case "-":
+                    result = num1 - num2
+                    break;
+                    case "*":
+                    result = num1 * num2
+                    break;
+                    case "/":
+                    result = num1 / num2
+                    break;
+
+            }
+        document.getElementById("result").innerText = result
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: inline-block;
+        padding: 0px 20px 30px 20px;
+        margin: 15px;
+        border: 1px solid gray;
+        line-height: 2;
+      }
+
+      div h3 {
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+     var i = 1;
+     var j = 1;
+     //이걸 안써주면 아예 계산이 안 되고..
+     //j를 선언하고 값을 1을 이때 주지 않으면 1단 계산이 안 됨.. 왜냐면, undefined이기 때문에..
+     while (i < 10) {
+        document.write("<div>");
+          document.write("<h3>" + i + "단</h3>");
+          while (j < 10) {
+            document.write(i + "x" + j + "=" + i * j + "<br/>");
+            j++;
+            //증감식을 안 써주면 1에서 멈추니까 계속 무한 루프
+            //증감식 써주는 위치가 이해 안됨..
+          }
+          document.write("</div>");
+          i++;
+          j = 1;
+        //위치 바뀌면 안 됨.. 1단 만들고 나머지는 아예 만들지를 않음
+        //이거 안 써주면 1단만 계산됨.. 나머지 h3는 살아있음.
+        //while문 내부랑 while문 바깥에 써준 값을 구분하자!!
+      }
+
+      //j=1 초기화 위치만 잘 맞춰주면 꼭 맨 아래에 쓸 필요는 없음..
+//       var i = 1;
+// while (i < 10) {
+//     var j = 1; // 내부 루프 시작 시 j 초기화
+//     document.write("<div>");
+//     document.write("<h3>" + i + "단</h3");
+    
+//     while (j < 10) {
+//         document.write(i + "x" + j + "=" + i * j + "<br/>");
+//         j++;
+//     }
+    
+//     document.write("</div>");
+//     i++;
+// }
+
+    
+      //   var i = 1;
+      //   var j = 1;
+      //   대입은 반드시 해줘야함! 선언 필수!
+      //   while (i >= 1 && i < 10) {
+      //var i = 1 ; 선언했는데 굳이 또 이 값을 줄 이유가 없지 않나??
+      //     document.write("<div>");
+      //     document.write("<h3>" + i + "단</h3>");
+
+      //     while (j >= 1 && j < 10) {
+      //       document.write(i + "x" + j + "=" + i * j + "<br/>");
+      //       j++;
+      //     }
+      //     document.write("</div>");
+      //     i++;
+      //     j = 1;
+      //   }
+
+      //   var i = 1;
+      //   var j = 1;
+
+//       <!DOCTYPE html>
+// <html lang="en">
+//   <head>
+//     <meta charset="UTF-8" />
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+//     <title>Document</title>
+//     <style>
+//       div {
+//         display: inline-block;
+//         padding: 0px 20px 30px 20px;
+//         margin: 15px;
+//         border: 1px solid gray;
+//         line-height: 2;
+//       }
+
+//       div h3 {
+//         text-align: center;
+//         font-weight: bold;
+//       }
+//     </style>
+//   </head>
+//   <body>
+//     <script>
+//       var i, j;
+//       for (i = 1; i < 10; i++) {
+//         document.write("<div>");
+//         document.write("<h3>" + i + "단</h3>");
+//         for (j = 1; j < 10; j++) {
+//           document.write(i + "X" + j + "=" + i * j + "<br/>");
+//         }
+//         document.write("</div>");
+//       }
+//     </script>
+//   </body>
+// </html>
+//     </script>
+//   </body>
+// </html>
