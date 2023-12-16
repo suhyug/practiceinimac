@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./노마드.css">
+    <body>
+<form id="login-form" class="hidden" >
+    <!-- 여기서 html에 class="hidden"값이 없으면 
+    작성하고나서 Login-form이 안 없어짐
+입력 후  없어지고 새로고침하면 다시 생김-->
+<input required maxlength="15" type="text" placeholder="당신의 이름은 무엇입니까?" size="30"/>
+<input type="submit" value="LogIn">
+</form>
+
+
+
+<h2 id="clock">00:00:00</h2>
+<h1 id="greeting"class="hidden"></h1>
+
+<form id="todo-form">
+    <input type="text" placeholder="해야할 일을 적고 엔터를 누르세요." required size="30"/>
+</form>
+
+<ul id="todo-list">
+</ul>
+
+
+<div id="quote"> 
+    <span></span>
+    <span></span>
+</div>
+
+
+<div id="weather">
+    <span></span>
+    <span></span>
+</div>
+
+    <script defer src="./background.js"></script>
+    <script defer src="./input.js"></script>
+    <script defer src="./clock.js"></script>
+    <script defer src="./quotes.js"></script>
+    <script defer src="./todo.js"></script>
+    <!-- <script defer src="./weather.js"></script> -->
+</body>
+</html>

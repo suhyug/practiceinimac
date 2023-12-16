@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+  /* font-family: "Nanum Gothic", sans-serif; */
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+hr {
+  border: 0.1px solid rgb(217, 217, 217);
+}
+
+/* 헤더1 */
+.firsthead {
+  display: flex;
+  /* background-color: antiquewhite; */
+  justify-content: space-between;
+  align-items: center;
+}
+.mainlo {
+  width: 50px;
+  margin: 10px 10px 10px 30px;
+  padding: 0px;
+}
+/* .mainlogo {
+  background-image: url(./image/pngwing.com.png);
+  width: 100px;
+  margin: 50px;
+  padding: 0px;
+} */
+/* 왜 백그라운드로 하면 안 되고 태그 안에 img로 넣어야 함..?? */
+/* 부모요소에서 전체정렬 */
+.leftmenu {
+  display: flex;
+  /* background-color: aqua; */
+}
+
+.menu1 {
+  display: flex;
+  align-items: center;
+}
+.menu1 > li {
+  /* background-color: yellow; */
+  margin-left: 30px;
+}
+
+.menu1 > li:hover {
+  scale: 1.2;
+}
+.rightmenu {
+  display: flex;
+}
+.right {
+  /* background-color: lightblue; */
+  margin-right: 30px;
+}
+
+
+/* ////////////////////////////////여기서 부터 수정 */
+/* popup-trigger는 shop입니다 */
+.popup-trigger{
+  /* position:relative; */
+  /* absolute로 할 경우 글씨 겹침 */
+}
+
+.popup-menu{
+  position:absolute;
+  /* position을 absolute로 안 하면 자리 비집고 들어감 */
+  display: none;
+  /* display none을 해야지 후버하기 전까지는 안 보임 */
+left: 0px;
+}
+.popup-menu2{
+  position:absolute;
+  /* position을 absolute로 안 하면 자리 비집고 들어감 */
+  display: none;
+  /* display none을 해야지 후버하기 전까지는 안 보임 */
+left: -124px;
+}
+.menu3{
+  display: flex;
+  margin-top: 30px;
+
+
+  /* list-style: none; */
+  /* 위에 ul에 전부 none 걸어줘서 필요없음 */
+  /* justify-content: space-around; */
+  /* justify-content는 무슨 값을 줘도 걍 똑같음? why??? */
+  /* align-items: center; */
+  /* align-items도 마찬가지... */
+}
+.menu33{
+  display: flex;
+  margin-top: 30px;
+}
+.menu3 > li {
+  margin-right: 28px;
+  color: gray;
+  /* white-space: nowrap; */
+  /* white-space 대신에 줄바꿈 방지하는 &nbsp; 써도 됨  */
+}
+.menu33 > li {
+  margin-right: 28px;
+  color: gray;
+
+}
+.popup-trigger:hover .popup-menu{
+  display: block;
+  /* 이래야 후버했을 때 뜹니다잉 */
+}
+.popup-trigger2:hover .popup-menu2{
+  display: block;
+  /* 이래야 후버했을 때 뜹니다잉 */
+}
+.menu3 > li:hover {
+  color: black;
+}
+.menu33 > li:hover {
+  color: black;
+}
+/* .firsthead2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+} */
+
+/* .right {
+  background-color: yellowgreen;
+  margin-left: 10px;
+  
+} */
+.blank {
+  /* background-color: yellow; */
+  width: 1500px;
+  height: 20px;
+  margin-left: 110px;
+}
+
+
+/* 헤더2 */
+.secondhead {
+  display: flex;
+  /* background-color: rgb(143, 92, 30); */
+  justify-content: space-around;
+  align-items: center;
+}
+/* .menu3 {
+  display: flex; */
+  /* justify-content: space-around; */
+/* } */
+/* 여기에 flex를 줘야 자식 li가 플렉스 */
+/* menu3가 아니라 .secondhead에 justify-content를 줘야함 */
+
+
+/* 메인 사진 */
+.onearticle {
+  display: flex;
+  /* background-repeat: space; */
+  /* background-size: cover; */
+  width: 1000px;
+  height: 600px;
+  margin-left: 350px;
+  /* align-items: center; */
+}
+/* 푸터1 */
+.firstfooter {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: aquamarine; */
+  width: 100vw;
+  height: 50px;
+}
+.menu4 {
+  display: flex;
+  align-items: center;
+}
+.menu4 > li {
+  /* background-color: lightcoral; */
+  margin-left: 10px;
+}
+.snsicon {
+  display: flex;
+  align-items: center;
+}
+i {
+  margin-right: 20px;
+}
+
+/* 푸터2 */
+.secondfooter {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: aqua; */
+  align-items: center;
+}
+.menu5 {
+  display: flex;
+}
+
+.menu5 > li {
+  /* background-color: orange; */
+  margin-left: 10px;
+}
+.stussy {
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.fa-instagram:hover {
+  color: gray;
+}
+
+.fa-vimeo-v:hover {
+  color: gray;
+}
+.hover-border:hover {
+  font-weight: 900;
+}

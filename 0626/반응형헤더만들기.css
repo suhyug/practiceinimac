@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  ul {
+    list-style: none;
+  }
+  /* HEADER */
+  header {
+    width: 100%;
+    height: 100px;
+    background-color: lightskyblue;
+  }
+  /* 768px 보다 클때의 header */
+  header .inner {
+    height: 100%;
+    /* margin: 0 auto; */
+    position: relative;
+    /* 여기서 relative 안 줘도 되는디... */
+  }
+  /* LOGO */
+  header .inner i {
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    transform: scale(2.5);
+    color: white;
+  }
+  header .inner .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  header .inner .menu li {
+    margin: 30px;
+    font-weight: 700;
+  }
+  header .small-menu {
+    display: none;
+  }
+
+  /* 768px 이하일 때의 조건 */
+  @media screen and (max-width: 768px) {
+    header {
+      width: 100%;
+      height: 60px;
+
+    }
+    header .inner .menu {
+      display: none;
+    }
+    header .inner i {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translate(-50%) scale(2);
+      /* translate로 조절하는 방법보다 더 확실한게 있지 않을까? */
+      color: white;
+    }
+   
+    header .small-menu {
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center; */
+      /* 왜 justify-content 값을 안 줘도 주축 중간 정렬이 되지? */
+      align-items: center;
+      padding: 15px;
+      background-color: whitesmoke;
+    }
+    header .small-menu li {
+      font-weight: 700;
+      margin: 15px;
+    }
+    header .small-menu li:hover {
+      color: whitesmoke;
+    }
+    header .small-menu:hover {
+      background-color: lightslategray
+    }
+  }
